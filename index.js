@@ -2,6 +2,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const bodyparser = require('body-parser')
+const { application } = require('express')
 require('dotenv').config
 
 const app = express()
@@ -39,7 +40,7 @@ app.use('./api/user', authRoutes)
 app.get('/',(req , res) =>{
     res.json({
         estado:true,
-        mensaje: 'works fone!!!'
+        mensaje: 'works fine!!!'
     })
 })
 
@@ -48,4 +49,5 @@ app.listen(PORT , () =>{
     console.log('Servidor jalando,excelente' + (PORT))
 
 })
+
 
